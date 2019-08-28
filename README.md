@@ -8,7 +8,7 @@
 •Install the required dependecies with: npm install  
 
 # Usage   
-•From a new terminal create a directory named: mongodb 
+•From a new terminal create a directory named: mongodb  
 •Create a subdirectory named: bandsdata  
 •Navigate to the mongodb directory    
 •Start MongoDB & use data directory as db with: mongod --dbpath=bandsdata --bind_ip 127.0.0.1      
