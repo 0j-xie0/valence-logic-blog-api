@@ -27,6 +27,6 @@
 
 # Next Steps  
 ### Authentication & Validation   
-•Implement HTTPS
+•Implement HTTPS  
 •Implement OAuth2 with JWTs & Passport  
 ### React Client & Server Integration
