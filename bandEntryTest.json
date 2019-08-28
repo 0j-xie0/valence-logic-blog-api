@@ -1,0 +1,29 @@
+{
+	"name": "Puppy Eater",
+	"genre": "Swedish Carnivore Sweat Metal",
+	"description": "Sweaty and crazed post-apocalyptic Swedes running around swinging axes.",
+	"label": "Self-Released",
+	"featured": "true",
+	
+	"comments": [
+		{
+			"rating": 5,
+			"comment": "These guys are the best I've seen! They actually eat puppies on stage!!",
+			"author": "Dick Weed",
+			"date": "2012-10-16T17:57:28.556094Z"
+			
+		},
+		{
+			"rating": 4,
+			"comment": "I love the lead singer! I want his demon baby!!",
+			"author": "Random Bandslut",
+			"date": "2014-09-05T17:57:28.556094Z"
+		},
+		{
+			"rating": 3,
+			"comment": "Roar!!! Cookie Monster!!",
+			"author": "Johnny McDoosh",
+			"date": "2015-02-13T17:57:28.556094Z"
+		}
+	]
+}

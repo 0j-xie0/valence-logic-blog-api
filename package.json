@@ -1,0 +1,19 @@
+{
+  "name": "jxea-fastify-mongo-swag-api",
+  "version": "1.0.0",
+  "description": "Bandserver API using Fastify MongoDB Mongoose Swagger",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J Xie",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^7.3.0",
+    "fastify": "^2.7.1",
+    "fastify-swagger": "^2.4.0",
+    "mongoose": "^5.6.11",
+    "nodemon": "^1.19.1"
+  }
+}
