@@ -14,7 +14,8 @@
 •Start MongoDB & use data directory as db with: mongod --dbpath=bandsdata --bind_ip 127.0.0.1      
 •From the first terminal start the Fastify server with: npm start    
 •From Postman or an HTTP client of your choice make requests to MongoDB  
-•From Postman or an HTTP client of your choice use bandEntryTest.json to perform exmaple POST request in application/JSON 
+•From Postman or an HTTP client of your choice use bandEntryTest.json to perform exmaple POST request in application/JSON  
+•From your browser navigate to http://127.0.0.1:3000/documentation for self-updating API documentation
 
 
 # Tasks Performed  
