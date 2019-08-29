@@ -1,26 +1,7 @@
 // External Dependancies
 const mongoose = require('mongoose')
+const Comment = require('./Comment')
 const Schema = mongoose.Schema;
-//define new schema for comments
-const commentSchema = new Schema({
-  rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-      required: true
-  },
-  comment: {
-      type: String,
-      required: true
-  },
-  author: {
-    type: String,
-    required: true
-  }
-},{
-  timestamps: true
-});
-
 //required: every document will have name as required field
 const bandSchema = new Schema({
   name: {
@@ -44,7 +25,7 @@ const bandSchema = new Schema({
     type: Boolean,
     default: false
   },
-  comments: [ commentSchema ]   //comment documents become subdocuments inside dish document
+  comments: [ { type: Schema.Types.ObjectId, ref: 'Comment' } ]   //comment documents become subdocuments inside dish document
 },{
     timestamps: true
 });

@@ -7,7 +7,7 @@ const Band = require('../models/Band')
 // Get all bands
 exports.getBands = async (req, reply) => {
   try {
-    const bands = await Band.find()
+    const bands = await Band.find().populate('comments')
     return bands
   } catch (err) {
     throw boom.boomify(err)
@@ -18,7 +18,7 @@ exports.getBands = async (req, reply) => {
 exports.getSingleBand = async (req, reply) => {
   try {
     const id = req.params.id
-    const band = await Band.findById(id)
+    const band = await Band.findById(id).populate('comments')
     return band
   } catch (err) {
     throw boom.boomify(err)
@@ -47,6 +47,20 @@ exports.updateBand = async (req, reply) => {
     throw boom.boomify(err)
   }
 }
+
+// Update an existing comment of a band
+exports.postBand = async (req, reply) => {
+  try {
+    const id = req.params.id
+    const band = req.body
+    const { ...updateData } = band
+    const update = await Band.findByIdAndUpdate(id, updateData, { new: true })
+    return update
+  } catch (err) {
+    throw boom.boomify(err)
+  }
+}
+
 
 // Delete a band
 exports.deleteBand = async (req, reply) => {

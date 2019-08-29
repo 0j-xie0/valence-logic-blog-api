@@ -21,9 +21,7 @@ mongoose.connect('mongodb://localhost/bandsdata')
   .catch(err => console.log(err))
 
 // Loop over each route
-routes.forEach((route, index) => {
-  fastify.route(route)
-})
+routes.forEach((route, index) => fastify.route(route))
 
 // Run the server!
 const start = async () => {

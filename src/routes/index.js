@@ -1,5 +1,6 @@
 // Import our Controllers
 const bandController = require('../controllers/bandController')
+const commentsController = require('../controllers/commentsController')
 
 // Import Swagger documentation
 //const documentation = require('./documentation/bandApi')
@@ -30,7 +31,13 @@ const routes = [
     method: 'DELETE',
     url: '/api/bands/:id',
     handler: bandController.deleteBand
-  }
+  },
+  {
+    method: 'GET',
+    url: '/api/bands/:id/comments',
+    handler: commentsController.getComments
+  },
+
 ]
 
 module.exports = routes
