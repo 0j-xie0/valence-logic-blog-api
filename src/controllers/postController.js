@@ -2,23 +2,23 @@
 const boom = require('boom')
 
 // Get Data Models
-const Band = require('../models/Band')
+const Post = require('../models/Post')
 
-// Get all bands
-exports.getBands = async (req, reply) => {
+// Get all posts
+exports.getPosts = async (req, response) => {
   try {
-    const bands = await Band.find().populate('comments')
-    return bands
+    const posts = await Post.find().populate('comments')
+    return posts
   } catch (err) {
     throw boom.boomify(err)
   }
 }
 
 // Get single band by ID
-exports.getSingleBand = async (req, reply) => {
+exports.getSinglePost = async (req, response) => {
   try {
     const id = req.params.id
-    const band = await Band.findById(id).populate('comments')
+    const band = await Post.findById(id).populate('comments')
     return band
   } catch (err) {
     throw boom.boomify(err)
@@ -26,9 +26,9 @@ exports.getSingleBand = async (req, reply) => {
 }
 
 // Add a new band
-exports.addBand = async (req, reply) => {
+exports.addPost = async (req, response) => {
   try {
-    const band = new Band(req.body)
+    const band = new Post(req.body)
     return band.save()
   } catch (err) {
     throw boom.boomify(err)
@@ -36,12 +36,12 @@ exports.addBand = async (req, reply) => {
 }
 
 // Update an existing band
-exports.updateBand = async (req, reply) => {
+exports.updatePost = async (req, response) => {
   try {
     const id = req.params.id
     const band = req.body
     const { ...updateData } = band
-    const update = await Band.findByIdAndUpdate(id, updateData, { new: true })
+    const update = await Post.findByIdAndUpdate(id, updateData, { new: true })
     return update
   } catch (err) {
     throw boom.boomify(err)
@@ -49,12 +49,12 @@ exports.updateBand = async (req, reply) => {
 }
 
 // Update an existing comment of a band
-exports.postBand = async (req, reply) => {
+exports.postPost = async (req, response) => {
   try {
     const id = req.params.id
     const band = req.body
     const { ...updateData } = band
-    const update = await Band.findByIdAndUpdate(id, updateData, { new: true })
+    const update = await Post.findByIdAndUpdate(id, updateData, { new: true })
     return update
   } catch (err) {
     throw boom.boomify(err)
@@ -63,10 +63,10 @@ exports.postBand = async (req, reply) => {
 
 
 // Delete a band
-exports.deleteBand = async (req, reply) => {
+exports.deletePost = async (req, response) => {
   try {
     const id = req.params.id
-    const band = await Band.findByIdAndRemove(id)
+    const band = await Post.findByIdAndRemove(id)
     return band
   } catch (err) {
     throw boom.boomify(err)

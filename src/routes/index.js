@@ -1,40 +1,39 @@
 // Import our Controllers
-const bandController = require('../controllers/bandController')
+const postController = require('../controllers/postController')
 const commentsController = require('../controllers/commentsController')
 
 // Import Swagger documentation
-//const documentation = require('./documentation/bandApi')
+//const documentation = require('./documentation/postApi')
 
 const routes = [
   {
     method: 'GET',
-    url: '/api/bands',
-    handler: bandController.getBands
+    url: '/api/posts',
+    handler: postController.getPosts
   },
   {
     method: 'GET',
-    url: '/api/bands/:id',
-    handler: bandController.getSingleBand
+    url: '/api/posts/:id',
+    handler: postController.getSinglePost
   },
   {
     method: 'POST',
-    url: '/api/bands',
-    handler: bandController.addBand,
-    // schema: documentation.addBandSchema
+    url: '/api/posts',
+    handler: postController.addPost,
   },
   {
     method: 'PUT',
-    url: '/api/bands/:id',
-    handler: bandController.updateBand
+    url: '/api/posts/:id',
+    handler: postController.updatePost
   },
   {
     method: 'DELETE',
-    url: '/api/bands/:id',
-    handler: bandController.deleteBand
+    url: '/api/posts/:id',
+    handler: postController.deletePost
   },
   {
     method: 'GET',
-    url: '/api/bands/:id/comments',
+    url: '/api/posts/:id/comments',
     handler: commentsController.getComments
   },
 
