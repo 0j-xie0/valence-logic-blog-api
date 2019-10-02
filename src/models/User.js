@@ -1,24 +1,24 @@
 // External Dependancies
 const mongoose = require('mongoose')
-const Comment = require('./Comment')
 const Schema = mongoose.Schema;
 //required: every document will have name as required field
-const postSchema = new Schema({
-  title: {
+const userSchema = new Schema({
+  email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
-  content: {
+  password: {
     type: String,
     required: true,
   },
-  tags : {
-    type : Array,
-    required:false
+  name: {
+    type: String,
+    required: true,
   }
 },{
     timestamps: true
 });
 //every band document can have multiple comments stored within an array
 
-module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('User', userSchema);
