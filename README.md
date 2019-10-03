@@ -24,9 +24,9 @@
 ### •Used Boom methods for HTTP error handling 
 ### •Used Mongoose to interface between API & database  
 •Relational management & translation between API & database Objects via ODM library  
-### Generated Swagger compliant documentation with Fastify-Swagger  
-### Implemented JWT compliance via Fastify-JWT
+### •Generated Swagger compliant documentation with Fastify-Swagger  
+### •Implemented JWT compliance via Fastify-JWT
 
 # Next Steps  
-### User Authentication & Validation handling  
-### React Client & Server Integration
+### •User Authentication & Validation handling  
+### •React Client & Server Integration
