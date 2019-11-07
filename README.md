@@ -23,7 +23,7 @@
 ### •Created Router node module to handle request & response routing  
 ### •Used Boom methods for HTTP error handling 
 ### •Used Mongoose to interface between API & database  
-•Relational management & translation between API & database Objects via ODM library  
+•Managed relational database translation between API & database Objects via ODM library  
 ### •Generated Swagger compliant documentation with Fastify-Swagger  
 ### •Implemented JWT compliance via Fastify-JWT
 
