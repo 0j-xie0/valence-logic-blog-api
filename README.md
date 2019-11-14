@@ -5,7 +5,7 @@
 •Install MongoDB v4.2.x  
 •Clone this repo to your computer    
 •Open a terminal and navigate to repo directory    
-•Install the required dependecies with: npm init  
+•Install the required dependecies with: npm install
 
 # Usage   
 •From a new terminal create a directory named: mongodb  
